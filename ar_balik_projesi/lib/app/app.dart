@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../features/fish_catalog/presentation/pages/fish_catalog_page.dart';
+import '../features/ar_aquarium/presentation/pages/camera_capture_page.dart';
 
 class ArBalikApp extends StatelessWidget {
   const ArBalikApp({super.key});
@@ -17,7 +17,7 @@ class ArBalikApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const FishCatalogPage(),
+      home: const CameraCapturePage(),
     );
   }
 }
