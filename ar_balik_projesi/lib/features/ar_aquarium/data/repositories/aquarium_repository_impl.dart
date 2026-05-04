@@ -9,21 +9,21 @@ class AquariumRepositoryImpl implements AquariumRepository {
       scientificName: 'Amphiprioninae',
       description:
           'Mercan resiflerinde yaşayan ve turuncu-beyaz çizgileriyle tanınan tür.',
-      modelAssetPath: 'lib/assets/models/clownfish.glb',
+      modelAssetPath: 'lib/assets/models/clown_fish_low_poly_animated.glb',
     ),
     AquariumFish(
       id: 'shark',
       name: 'Köpekbalığı',
       scientificName: 'Selachimorpha',
       description: 'Kıkırdak iskelete sahip, açık denizlerde yaşayan güçlü avcı.',
-      modelAssetPath: 'lib/assets/models/shark.glb',
+      modelAssetPath: 'lib/assets/models/tiger_shark.glb',
     ),
     AquariumFish(
       id: 'betta',
       name: 'Betta',
       scientificName: 'Betta splendens',
       description: 'Canlı renkleri ve yüzgeçleriyle bilinen popüler tatlı su balığı.',
-      modelAssetPath: 'lib/assets/models/betta.glb',
+      modelAssetPath: 'lib/assets/models/animated_low_poly_fish.glb',
     ),
   ];
 

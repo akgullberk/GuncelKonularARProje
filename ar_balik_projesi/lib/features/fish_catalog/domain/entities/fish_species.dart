@@ -15,7 +15,7 @@ class FishSpecies extends Equatable {
   final String scientificName;
   final String shortDescription;
 
-  /// Örn. `assets/models/clownfish.glb` — AR adımında kullanılacak.
+  /// Örn. `lib/assets/models/tiger_shark.glb` — AR adımında kullanılacak.
   final String? modelAssetPath;
 
   @override

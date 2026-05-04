@@ -45,5 +45,7 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>AR akvaryum deneyimi icin kameraya erisim gerekiyor.</string>
 </dict>
 </plist>
