@@ -1,10 +1,16 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
+import '../../domain/aquarium_entry_mode.dart';
 import 'aquarium_page.dart';
 
 class CameraCapturePage extends StatefulWidget {
-  const CameraCapturePage({super.key});
+  const CameraCapturePage({
+    super.key,
+    required this.entryMode,
+  });
+
+  final AquariumEntryMode entryMode;
 
   @override
   State<CameraCapturePage> createState() => _CameraCapturePageState();
@@ -72,9 +78,12 @@ class _CameraCapturePageState extends State<CameraCapturePage> {
       if (!mounted) {
         return;
       }
-      await Navigator.of(context).push(
+      await Navigator.of(context).push<void>(
         MaterialPageRoute<void>(
-          builder: (_) => AquariumPage(capturedImagePath: photo.path),
+          builder: (_) => AquariumPage(
+            capturedImagePath: photo.path,
+            entryMode: widget.entryMode,
+          ),
         ),
       );
     } catch (e) {
@@ -102,8 +111,15 @@ class _CameraCapturePageState extends State<CameraCapturePage> {
   @override
   Widget build(BuildContext context) {
     final controller = _controller;
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Zemin Fotoğrafı Çek')),
+      appBar: AppBar(
+        title: Text(
+          widget.entryMode == AquariumEntryMode.explore
+              ? 'Kesif — Zemin fotografi'
+              : 'Oyun — Zemin fotografi',
+        ),
+      ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : _error != null
